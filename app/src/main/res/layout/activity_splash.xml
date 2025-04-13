@@ -5,6 +5,6 @@
     android:background="@android:color/holo_green_dark">
     <ImageView
         android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:src
+        android:layout_height="200dp">
+    </ImageView>
 </RelativeLayout>
