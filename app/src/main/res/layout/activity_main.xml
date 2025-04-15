@@ -31,8 +31,8 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_margin="32dp"
-        android:backgroundTint="@android:color/holo_green_dark"
-        android:src="@drawable/baseline_add_24"/>
+        android:backgroundTint="@color/eco"
+        android:src="@drawable/baseline_add"/>
 
 
 </RelativeLayout>
