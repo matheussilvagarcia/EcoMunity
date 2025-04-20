@@ -28,9 +28,9 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.ViewHolder> {
 
     private DatabaseHandler db;
 
-    private ToDoAdapter(DatabaseHandler db,MainActivity activity){
+    public ToDoAdapter(DatabaseHandler db, MainActivity activity){
         this.db = db;
-        this.activity = activity
+        this.activity = activity;
     }
 
     public ToDoAdapter(MainActivity activity) {
@@ -76,6 +76,13 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.ViewHolder> {
 
         public Context getContext(){
             return activity;
+        }
+
+        public void deleteItem(int position){
+            ToDoModel item = todoList.get(position);
+            db.deleteTask(item.getId());
+            todoList.remove(position);
+            notifyItemRemoved(position);
         }
 
         public void editItem(int position){
